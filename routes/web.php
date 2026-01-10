@@ -24,6 +24,9 @@ foreach (config('tenancy.central_domains') as $domain)
 
             Route::resource('tenants', TenantController::class)->except('show');
         });
+
+         require __DIR__.'/auth.php';
     }); 
+   
 }
-        require __DIR__.'/auth.php';
+      
